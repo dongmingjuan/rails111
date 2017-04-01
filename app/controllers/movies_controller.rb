@@ -12,4 +12,10 @@ class MoviesController < ApplicationController
     @movie.save
     redirect_to movies_path
   end
+
+  private
+
+  def movie_params
+    params.require(:movies).permit(:title, :description)
+  end
   end
