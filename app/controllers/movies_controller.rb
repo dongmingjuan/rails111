@@ -29,7 +29,7 @@ class MoviesController < ApplicationController
     if @movie.update(movie_params)
        redirect_to movies_path, notice: "Update success!"
     else
-      render: edit
+      render :edit
     end
   end
 
@@ -42,6 +42,6 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movies).permit(:title, :description)
+    params.require(:movie).permit(:title, :description)
   end
   end
