@@ -1,4 +1,13 @@
 <div class="col-md-4 col-offset-4">
-  <h2 class="text-center">编辑电影讨论版</h2>
+     <h2 class="text-center">编辑电影讨论版</h2>
 
-  <hr>
+     <hr>
+     <%= simple_form_for @movie do |f| %>
+       <div class="form-movie">
+         <%= f.input :title, input_html: { class: "form-control"} %>
+         <%= f.input :description, input_html: { class: "form-control"} %>
+       </div>
+
+       <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submiting..."} %>
+     <% end %>
+</div>

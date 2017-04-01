@@ -30,8 +30,7 @@ class MoviesController < ApplicationController
        redirect_to movies_path, notice: "Update success!"
     else
       render: edit
-    end 
-
+    end
   end
 
   def destroy
